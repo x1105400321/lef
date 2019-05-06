@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* 给大部分字体设置颜色和大小 */
+html, body {
+  color: #666;
+  font-size: 12px;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* 购物车头部 */
+.cart-header {
+  width: 100%;
+  height: 98px;
+  border-bottom: 2px solid #f52648;
+  /* 中间盒子 */
+}
+.cart-header .cart-header-box {
+  width: 1000px;
+  height: 98px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* 商城logo */
+  /* 右边进度图图片 */
+}
+.cart-header .cart-header-box .cart-logo {
+  width: 175px;
+  height: 98px;
+  float: left;
+}
+.cart-header .cart-header-box .cart-logo a {
+  width: 175px;
+  height: 98px;
+  background: url(../img/cart-logo.png) no-repeat;
+  display: block;
+}
+.cart-header .cart-header-box .cart-step {
+  float: right;
+  width: 487px;
+  height: 98px;
+  background: url(../img/e33adef239983ef3a761fe92b3a3bbdf.jpg) no-repeat 0 8px;
+}
+
+/* 购物车主要部分 */
+.cart-content {
+  width: 1000px;
+  margin: 0 auto;
+}
+.cart-content .cart-content-top {
+  height: 56px;
+  line-height: 56px;
+}
+.cart-content .cart-content-top .time-pic {
+  width: 11px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  background: url(../img/tiem.jpg) no-repeat;
+}
+
+/*# sourceMappingURL=cart.css.map */

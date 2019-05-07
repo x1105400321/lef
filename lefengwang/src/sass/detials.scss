@@ -13,6 +13,8 @@ $bg_url:url(../img/de.png);
 .detials{
     width: 100%;
     background: #eee;
+    position: relative;
+    z-index: 30;
     .detials-main{
         /* 外部盒子 */
         width: 1002px;

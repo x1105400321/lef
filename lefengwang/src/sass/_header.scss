@@ -66,23 +66,22 @@ $bg_url3:url(../img/556ffa7b021b37316bfd2c3356022fcd.png);
         }
     }
     span{
+        float: right;
+        padding: 0 0 0 10px;
+        background:#fff $bg_url -527px -248px no-repeat;
+        cursor: pointer;
+        color: red;
         display: block;
         position: absolute;
         top: 0;
         width: 80px;
         height: 29px;
-        background: #fff;
+       
         border-left: 1px solid #dfdfdf;
         border-right: 1px solid #dfdfdf;
-       
         right: 38px;
         color: red;
-        // a{
-        //     padding: 0 0 0 24px;
-        //     background:$bg_url -530px -248px;
-        //     float: right;
-        //     color:red;
-        // }
+      
     }
 
 }
@@ -220,6 +219,13 @@ li:hover .order-show{
         color:red;
     }
 }
+.show-welcome{
+    @extend %bar;
+    display:none;
+    a{
+        color:red;
+    }
+}
 /* 左边地址区 */
 .address{
     padding: 0 10px;
@@ -229,6 +235,63 @@ li:hover .order-show{
         top: 5px
     }
 }
+/* 地址鼠标滑过效果 */
+.send-select{
+    position: absolute;
+    left: 6px;
+    top: -1px;
+    min-width: 117px;
+    z-index: 100;
+    display: none;
+    /* 省份列表 */
+    ul{
+        width: 311px;
+        height: 216px;
+        overflow: hidden;
+        border: 1px solid #dfdfdf;
+        top: 29px;
+        padding: 15px 0 10px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        li{
+            float: left;
+            width: 58px;
+            text-indent: 22px;
+            a{
+                &:hover{
+                    color:red;
+                }
+            }
+        }
+    }
+    span{
+        background: #fff;
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 97px;
+        padding: 0 10px;
+        height: 29px;
+        border-left: 1px solid #dfdfdf;
+        border-right: 1px solid #dfdfdf;
+        top: 1px;
+        text-indent: 0;
+    }
+}
+/* 送货框 */
+.songhuo{
+    width: 110px;
+}
+.songhuo:hover .send-select{
+display: block;
+}
+
+
+
+
+
+
 
 
 /* 搜索部分及下面的红色导航条 */
@@ -370,10 +433,10 @@ li:hover .order-show{
 /* 二级导航 */
 .header-main-menu{
     width: 220px;
-    height:300px;
     background: white;
     position: absolute;
     top: 40px;
+    z-index: 20;
     
     dl{
         position: relative;
@@ -395,6 +458,7 @@ li:hover .order-show{
         overflow: hidden;
         height: 96px;
         border-bottom: 1px solid #eee;
+        z-index: 20;
         /* 主要分类 */
         strong{
             float: left;
@@ -425,6 +489,35 @@ li:hover .order-show{
             }
         }
     
+}
+.more-tip{
+    width: 100%;
+    transition: height .2s;
+    height: 33px;
+    overflow: hidden;
+    float: left;
+    line-height: 33px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    strong{
+        width: 23px;
+        height: 13px;
+        display: inline-block;
+        margin-top: 10px;
+        background: url(../img/downarrow.png) no-repeat;
+    }
+}
+.all{
+    width: 100%;
+    transition: height .2s;
+    height: 33px;
+    overflow: hidden;
+    float: left;
+    line-height: 33px;
+    color: #999!important;
+    font-size: 12px;
+    text-align: center;
 }
 /* 右边鼠标移入才出现区域 */
 .header-main-menu-dd{
@@ -480,6 +573,31 @@ li:hover .order-show{
             }
         }
     
+}
+/* 两个暂时不可见的dl */
+.header-main-menu-dl{
+    display: none;
+    height:0;
+    
+    transition:height 2s;
+}
+/* 查看全部分类 */
+.all{
+    display: none;
+
+}
+/* 鼠标移入出现 */
+.header-main-menu:hover .header-main-menu-dl{
+    display: block;
+height:109px;
+}
+/* 鼠标移入查看全部分类出现 */
+.header-main-menu:hover .all{
+    display: block;
+    }
+/* 下箭头消失 */
+.header-main-menu:hover .more-tip{
+    display: none;
 }
 /* 移入效果 */
 dl:hover .header-main-menu-dd{

@@ -189,7 +189,7 @@ $login_url:url(../img/login-icon5.jpg);
     margin-bottom: 15px;
     width: 300px;
     clear: both;
-        a{
+      #btn{
             width: 300px;
             height: 40px;
             display: block;
@@ -200,6 +200,9 @@ $login_url:url(../img/login-icon5.jpg);
             line-height: 38px;
             color: #fff;
         }
+    }
+    #error{
+        color:red;
     }
     /* 下方合作伙伴 */
     .login-body-partner{

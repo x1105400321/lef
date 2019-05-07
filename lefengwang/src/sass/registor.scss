@@ -255,7 +255,8 @@ $login_url:url(../img/login-icon5.jpg);
     margin-bottom: 15px;
     width: 300px;
     clear: both;
-        a{
+        input{
+            border:0;
             width: 300px;
             height: 40px;
             display: block;
@@ -265,6 +266,7 @@ $login_url:url(../img/login-icon5.jpg);
             font-size: 14px;
             line-height: 38px;
             color: #fff;
+            cursor: pointer;
         }
     }
     /* 下方合作伙伴 */

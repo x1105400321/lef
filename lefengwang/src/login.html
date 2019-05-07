@@ -72,21 +72,29 @@
     <!-- 表单区域 -->
     <div class="login-main">
         <div class="login-main-box">
-            <form action="">
+                
+				<form method="post" onsubmit="return false;">
                 <div class="input-box">
                     <div class="login-title">
                         <span class="denglu"></span>
                         <span class="zhuce"><a href="#">免费注册</a></span>
                     </div>
                     <ul class="login-body">
+                        <!-- 用户名 -->
                         <li class="login-body-username">
-                            <h2>账号 </h2>
-                            <input type="text" name="username" id="username">
+                            <h2><label for="username">用户名:</label></h2>
+                            
+						<input id="username" name="username" type="text" autocomplete="off"/>
+                          
                         </li>
+                        <!-- 密码 -->
                         <li class="login-body-password">
-                            <h2>密码 </h2>
+                            <h2> <label for="password">密 码:</label> </h2>
+                           
+						
                             <a href="#" class="forget">忘记密码?</a>
-                            <input type="text" name="password" id="password">
+                            <input id="password" name="password" type="password"/>
+                            <div id="error"></div>
                         </li>
                         <li class="login-body-yzm">
                             <h2>验证码</h2>
@@ -97,7 +105,9 @@
                             </span>
                         </li>
                         <li class="login-body-login-btn">
-                            <a href="#" class="submit">登录</a>
+                        
+                            <input type="button" name="submit" value=" 登录  " id="btn" class="submit"/>
+                      
                         </li>
                         <li class="login-body-partner">
                             <p>
@@ -149,5 +159,8 @@
             <a href="#" class="footer-bottom-img5"></a>
         </div>
     </div>
+    <script src="script/thirdplugins/jquery.js"></script>
+    <script src="script/js/login.js"></script>
+   
 </body>
 </html>
